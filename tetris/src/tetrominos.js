@@ -15,7 +15,7 @@ export const TETROMINOS = {
             [0, "J", 0],
             ["J", "J", 0],
         ],
-        color: "36, 95, 235",
+        color: "36, 95, 223",
     },
     L: {
         shape: [
@@ -30,7 +30,7 @@ export const TETROMINOS = {
             ["O", "O"],
             ["O", "O"],
         ],
-        color: "223, 317, 36",
+        color: "223, 217, 36",
     },
     S: {
         shape: [
@@ -57,10 +57,26 @@ export const TETROMINOS = {
         color: "227, 78, 78",
     },
 };
-
+// selecting random tetrominos
 export const randomTetromino = () => {
     const tetrominos = "IJLOSTZ";
     const randTetromino =
         tetrominos[Math.floor(Math.random() * tetrominos.length)];
     return TETROMINOS[randTetromino];
 };
+
+// export const randomTetromino = () => {
+//     const tetrominos = "IJLOSTZ";
+
+//     const changeTetromino = () => {
+//         const randTetromino =
+//             tetrominos[Math.floor(Math.random() * tetrominos.length)];
+//         // update the state variable that holds the current tetromino with the returned value.
+//         setCurrentTetromino(TETROMINOS[randTetromino]);
+//     };
+
+//     changeTetromino();
+//     setInterval(changeTetromino, 1000);
+
+//     return TETROMINOS[randTetromino];
+// };
